@@ -1,8 +1,6 @@
 # HomeTabs
-HomeTabs project
 
-This is original HomeTabs project. 
-Created by grildroid.
-Licensed under GNU General Public License v3 (GPL-3)
-
+  This is original HomeTabs project  
+  HomeTabs Copyright © 2021 grildroid  
+  [Licensed under GNU General Public License v3 (GPL-3)](/LICENSE)  
 
