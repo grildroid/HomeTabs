@@ -21,16 +21,18 @@
 # Getting Started (wow so simple)
 \[Windows]
 1. Run HomeTabs.exe
-
+2. Open your browser and type in your address bar: 127.0.0.2 (you can check and change address in config.ini in HomeTabs main folder)
+3. Enjoy ❤️
 
 # Tips
 *  On Windows you can replace ip address in address bar to domain name by editing hosts file.  
-  Example: 127.0.1.2  mycoolstartpage.net  
+  *Example: 127.0.1.2  mycoolstartpage.net*  
+*  On Windows You can add HomeTabs.exe or main.py files to autorun folder and load the HomeTabs startpage automatically with your system
   
 # Technologies
 * Writed on Python3 language. Using modules: Flask, Sqlite3, flask-socketio.
 * Uses Socket.IO (JS).
-* Font Awesome Free icons.
+* Uses Font Awesome Free icons.
   
 # License
   HomeTabs Copyright © 2021 grildroid  
