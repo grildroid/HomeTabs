@@ -7,6 +7,8 @@
   
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/grildroid/HomeTabs?style=for-the-badge)  
   
+  Code should be a crossplatform (not tested on unix yet). So you can try to run main.py on Windows and Linux systems.
+  
   * Systems: Windows 10  
   * Browsers: Google Chrome, Opera, Mozilla Firefox  
   
