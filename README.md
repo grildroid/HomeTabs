@@ -2,6 +2,8 @@
   HomeTabs project helps you to organize bookmarks for web browsers (like a browser's home page, but cooler).  
   Design of HomeTabs was inspiried by Mozilla Firefox startpage, i think this is the best way to organise bookmarks, but history of browsing saved on homepage - is bad idea.  
   
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/grildroid/HomeTabs?style=for-the-badge)
+  
   * Systems: Windows 10  
   * Browsers: Google Chrome, Opera, Mozilla Firefox  
   
