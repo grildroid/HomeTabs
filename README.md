@@ -5,18 +5,21 @@
   
   *In plans: improve HomeTabs in the future and add a lot of new interesting functions.*  
   
+<p align="center">
+<a href="/releases"><img src="https://img.shields.io/github/v/release/grildroid/HomeTabs?style=flat-square" alt="Github release Badge"/></a>
+<a href="/license"><img src="https://img.shields.io/github/license/grildroid/HomeTabs?style=flat-square" alt="Github license Badge"/></a>
+</p>
+  
   ![HomeTabs example](https://user-images.githubusercontent.com/55492813/118639548-b1e40480-b7e0-11eb-8815-7f474b26a52d.png)
   
   **❤️ Come visit our Telegram channel with news about HomeTabs updates, some blog stuff and other @grildroid projects! ❤️**  
   
-  
-  <a href="https://t.me/grildroidcave"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>
-  <a href="https://trello.com/b/mLLcO0iz/hometabs"><img src="https://img.shields.io/badge/-Trello-blue?&style=for-the-badge&logo=Trello" alt="Trello Badge"/></a>
-  
+<p align="center">
+<a href="https://t.me/grildroidcave"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>
+<a href="https://trello.com/b/mLLcO0iz/hometabs"><img src="https://img.shields.io/badge/-Trello-blue?&style=for-the-badge&logo=Trello" alt="Trello Badge"/></a> 
+</p>
+
   ____
-  
-  <a href="/releases"><img src="https://img.shields.io/github/v/release/grildroid/HomeTabs?style=for-the-badge" alt="Github release Badge"/></a>
-  <a href="/license"><img src="https://img.shields.io/github/license/grildroid/HomeTabs?style=flat-square" alt="Github license Badge"/></a>
   
   Code should be a crossplatform (not tested on unix yet). So you can try to run main.py on Windows and Linux systems.
   
