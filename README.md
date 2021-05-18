@@ -1,6 +1,8 @@
 # HomeTabs
-  HomeTabs project helps you to organize bookmarks for web browsers (like a browser's home page, but cooler).  
+  HomeTabs project helps you to organize bookmarks for web browsers (like a standart browser's home page, but cooler and more comfortable).  
   Design of HomeTabs was inspiried by Mozilla Firefox startpage, i think this is the best way to organise bookmarks, but history of browsing saved on homepage - is bad idea.  
+  
+  HomeTabs don't collect and don't transfer any of your personal data!  
   
   *In plans: improve HomeTabs in the future and add a lot of new interesting functions.*  
   
