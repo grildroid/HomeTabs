@@ -18,7 +18,7 @@
 # Features
 * Organize your bookmarks by positioning it
 * Change an icon's for your bookmarks
-
+* Privacy-aware (no unconfirmed user data collection)
 
 # Getting Started (wow so simple)
 \[Windows]
