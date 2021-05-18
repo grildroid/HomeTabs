@@ -4,6 +4,8 @@
   
   *In plans: improve HomeTabs in the future and add a lot of new interesting functions.*  
   
+  ![HomeTabs example](https://user-images.githubusercontent.com/55492813/118639548-b1e40480-b7e0-11eb-8815-7f474b26a52d.png)
+  
   **❤️ Come visit our Telegram channel with news about HomeTabs updates, some blog stuff and other @grildroid projects! ❤️**  
   [Telegram channel](https://t.me/grildroidcave)  
   ____
