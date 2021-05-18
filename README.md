@@ -26,6 +26,8 @@
 * Change an icon's for your bookmarks
 * Privacy-aware (no unconfirmed user data collection)
 
+![HomeTabs gif](https://user-images.githubusercontent.com/55492813/118640835-19e71a80-b7e2-11eb-9f4b-730701a526fe.gif)
+
 # Getting Started (wow so simple)
 \[Windows]
 1. Run HomeTabs.exe
