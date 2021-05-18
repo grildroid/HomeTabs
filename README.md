@@ -43,7 +43,16 @@
 # Tips
 *  On Windows you can replace ip address in address bar to domain name by editing hosts file.  
   *Example: 127.0.1.2  mycoolstartpage.net*  
-*  On Windows You can add HomeTabs.exe or main.py files to autorun folder and load the HomeTabs startpage automatically with your system
+  
+*  On Windows you can add HomeTabs.exe or main.py files to autorun folder and load the HomeTabs startpage automatically with your system.
+
+*  On Windows you can configure your HomeTabs app to make an app-server for your local network. Set the ip parameter in config.ini to local ip of your PC. Then try to connect from other devices to your HomeTabs. Remember about port, you should type it in adress bar if port not equal 80.  
+  *Example ip value in config.ini: ip = 192.168.1.2*  
+  *Example of url: http://192.168.1.2:8000*  
+  **REMEMBER! Don't set port in config.ini that opened on your router! Your HomeTabs page may become visible to other users in Internet!**
+  
+* On Windows you can try to set the port value in config.ini to 80. Then you may try to open your HomeTabs page without typing a port value in URL.  
+ *Example of url:  192.168.1.2*  
   
 # Technologies
 * Writed on Python3 language. Using modules: Flask, Sqlite3, flask-socketio.
