@@ -2,10 +2,14 @@
   HomeTabs project helps you to organize bookmarks for web browsers (like a browser's home page, but cooler).  
   Design of HomeTabs was inspiried by Mozilla Firefox startpage, i think this is the best way to organise bookmarks, but history of browsing saved on homepage - is bad idea.  
   
-  **In plans: improve HomeTabs in the future and add a lot of new interesting functions.**  
+  *In plans: improve HomeTabs in the future and add a lot of new interesting functions.*  
+  
+  **❤️ Come visit our Telegram channel with news about HomeTabs updates, some blog stuff and other @grildroid projects! ❤️**  
+  [Telegram channel](https://t.me/grildroidcave)  
   ____
   
-  ![HomeTabs Trello](https://trello.com/b/mLLcO0iz/hometabs)  
+  [HomeTabs Trello](https://trello.com/b/mLLcO0iz/hometabs)  
+
   
   ![GitHub release (latest by date)](https://img.shields.io/github/v/release/grildroid/HomeTabs?style=for-the-badge)  
   
