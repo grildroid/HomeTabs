@@ -16,18 +16,16 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import logging
-from app import app, socketio, flask_addr, flask_debug, socket_io__logging
+from app import app, socketio, flask_addr, flask_debug, socket_io__logging_block
 
-
-# socket.io requests filtering
+# Socket.io requests filtering
 class LoggerFilter(logging.Filter):
     def filter(self, record):
         if 'socket.io' not in str(record.getMessage()):
             return record
 
+if __name__ == '__main__':
+    if socket_io__logging_block is True: # If false - prints requests.
+        logging.getLogger("werkzeug").addFilter(LoggerFilter())
 
-if socket_io__logging is True:
-    logging.getLogger("werkzeug").addFilter(LoggerFilter())
-
-from engineio.async_drivers import gevent
-socketio.run(app, host=flask_addr[0], port=flask_addr[1], debug=flask_debug)
+    socketio.run(app, host=flask_addr[0], port=flask_addr[1], debug=flask_debug)

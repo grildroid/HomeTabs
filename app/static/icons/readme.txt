@@ -1,0 +1,1 @@
+All of this icons (in /static/icons) are licensed by their companies and holders. Some of them is a official trademarks

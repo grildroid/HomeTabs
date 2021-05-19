@@ -16,40 +16,25 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import os, sys, time, sqlite3, contextlib, configparser
-
 from flask import Flask
+
 from flask_socketio import SocketIO
 
 
-if getattr(sys, 'frozen', False):
-    template_folder = os.path.join(sys._MEIPASS, 'templates')
-    static_folder = os.path.join(sys._MEIPASS, 'static')
-    app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
-else:
-    app = Flask(__name__)
+VERSION_NUM = '1.0.1'
 
-app.secret_key = os.urandom(24).hex()
-socketio = SocketIO(app)
-
-config = configparser.ConfigParser()
-config_file = 'config.ini' # Config file name
-config.read(config_file)
-
-
-flask_debug = False # [True/False] True - debug-mode Flask
-socket_io__logging = True # [True/False] True - logging SocketIO Werkzeug requests to console
 logfile_name = f'lastlog.log' # Log-file name for ReLogger
 
-ip = config.get("Settings", "ip")
-port = int(config.get("Settings", "port"))
-flask_addr = (ip, port) # Flask server address
-
+flask_debug = False # [True/False] True - debug-mode Flask
+socket_io__logging_block = False # [True/False] False - log SocketIO Werkzeug requests to console
 
 
 # Collect data from STDOUT and STDERR. Prints data to log file
 class ReLogger(object):
+    __class_prefix = 'ReLogger'
+
     def __init__(self, stream_type):
-        print(f'[Logger] Initiated logger on {stream_type}')
+        self.print(f'[INFO] Initiated ReLogger on {stream_type}')
         open(logfile_name, "w", encoding='utf-8').write('')
 
         if stream_type == 'stdout':
@@ -64,27 +49,85 @@ class ReLogger(object):
 
     def flush(self):
         pass
+
+    # Print function for class
+    def print(self, data):
+        print(f'({time.strftime("%H:%M:%S")}) [{self.__class_prefix}] {data}')
+
 sys.stdout = ReLogger(stream_type='stdout')
 sys.stderr = ReLogger(stream_type='stderr')
 print('\n  HomeTabs Copyright (C) 2021  grildroid. HomeTabs Licensed under GNU General Public License 3.0  \n')
+print(f'Current HomeTabs version: {VERSION_NUM}\n')
 
+# Code block for --onefile parameter of pytoexe
+if getattr(sys, 'frozen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    static_folder = os.path.join(sys._MEIPASS, 'static')
+    app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+else:
+    app = Flask(__name__)
+
+app.secret_key = os.urandom(24).hex()
+socketio = SocketIO(app)
+
+# Config controller class
+class ConfigController:
+    __class_prefix = 'ConfigController'
+    config_file = 'config.ini'  # Config file name
+    config = None
+
+    def __init__(self):
+        self.config = configparser.ConfigParser()
+
+        if os.path.isfile(self.config_file):
+            self.config.read(self.config_file)
+            self.print(f"[OK] Found config: {self.config_file}")
+        else:
+            self.print(f"[ERROR] Can't find {self.config_file}")
+            self.create_config()
+            self.print(f"[OK] Created config: {self.config_file}")
+        print('')
+
+    def create_config(self):
+        self.config.add_section('Settings')
+        self.config.set('Settings', 'ip', '127.0.1.1')
+        self.config.set('Settings', 'port', '8000')
+        with open(self.config_file, 'w') as config_file_fp:
+            self.config.write(config_file_fp)
+
+    # Print function for class
+    def print(self, data):
+        print(f'({time.strftime("%H:%M:%S")}) [{self.__class_prefix}] {data}')
+
+ConfigControllerOBJ = ConfigController()
+ip = ConfigControllerOBJ.config.get("Settings", "ip")
+port = int(ConfigControllerOBJ.config.get("Settings", "port"))
+flask_addr = (ip, port) # Flask server address
+
+if port != 443: print(f'[INFO] HomeTabs will be runned on: http://{ip}:{port}/\n')
+else: print(f'[INFO] HomeTabs will be runned on: https://{ip}:{port}/\n')
+
+
+# Database controller class
 class TabsController:
     __class_prefix = 'TabsController'
     tabs_db_name = 'tabs_data.sqlite3' # Tabs database name. Should be .sqlite3
 
     __create_tabs__sql = """CREATE TABLE tabs (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name text, url text, icon_url text)"""
     __get_tabs_all__sql = """SELECT * FROM tabs"""
-    __num_of_tabs = 32 # Number of generating tabs. 8/16/24/32
+    __num_of_tabs = 32 # Number of generating tabs: 8/16/24/32
 
     def __init__(self):
         if os.path.isfile(self.tabs_db_name):
-            self.print(f'[OK] Founded tabs database')
+            self.print(f'[OK] Found tabs database: {self.tabs_db_name}')
         else:
+            self.print(f"[ERROR] Can't find tabs database ({self.tabs_db_name})")
             self.create_db()
-            if os.path.isfile(self.tabs_db_name): print(f'[OK] Database created')
-            else: self.print(f'[ERROR] Database not created')
+            self.print(f'[OK] Tabs database created: {self.tabs_db_name}')
+        print('')
 
-    # Create database function #TODO: NEEDS TESTS
+
+    # Create database function
     def create_db(self):
         with contextlib.closing(sqlite3.connect(self.tabs_db_name)) as conn:
             conn.row_factory = self.__dict_factory
@@ -92,7 +135,10 @@ class TabsController:
             cursor.execute(self.__create_tabs__sql)
 
             for iteration in range(1, self.__num_of_tabs+1):
-                cursor.execute('INSERT INTO tabs (id) VALUES (?)', (iteration,))
+                if iteration == 1:
+                    cursor.execute('INSERT INTO tabs (id, name, url, icon_url) VALUES (?, ?, ?, ?)', (iteration, 'Visit author 💖', 'https://github.com/grildroid', '/static/icons/github.png'))
+                else:
+                    cursor.execute('INSERT INTO tabs (id) VALUES (?)', (iteration,))
 
             cursor.close()
             conn.commit()
@@ -123,7 +169,7 @@ class TabsController:
 
             cursor.execute('UPDATE tabs SET (name, url, icon_url) = (?, ?, ?) WHERE id = ?', (tab_data['name'], tab_data['url'], tab_data['icon_url'], int(tab_data['id'])+1))
             conn.commit()
-            print(f'[INFO] Updated tab with id: {int(tab_data["id"])+1}\n')
+            self.print(f'[INFO] Updated tab with id: {int(tab_data["id"])+1}')
 
     # Replace all tab data to None
     def tab_delete(self, tab_id):
@@ -131,11 +177,11 @@ class TabsController:
             cursor = conn.cursor()
             cursor.execute('UPDATE tabs SET (name, url, icon_url) = (?, ?, ?) WHERE id = ?', (None, None, None, int(tab_id)+1))
             conn.commit()
-            print(f'[INFO] Deleted tab with id: {int(tab_id) + 1}\n')
+            self.print(f'[INFO] Deleted tab with id: {int(tab_id) + 1}')
 
     # Print function for class
     def print(self, data):
-        print(f'({time.strftime("%H:%M:%S")}) [{self.__class_prefix}] {data}\n')
+        print(f'({time.strftime("%H:%M:%S")}) [{self.__class_prefix}] {data}')
 
     # For get_all function. Returns data of tab in dictionary
     @staticmethod

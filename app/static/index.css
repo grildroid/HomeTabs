@@ -92,8 +92,13 @@ main {margin-top: 80px;}
 
 /*== Watermark ==*/
 #watermark {position: absolute; bottom: 3px; left: 3px; display: flex; flex-flow: column; color: #F9F9FA;}
+#watermark span {font-size: 13px;}
 #watermark a {text-decoration: underline; color: #F9F9FA;}
 #watermark a:visited {color: #F9F9FA;}
+
+/*== Version ==*/
+#version {position: absolute; bottom: 3px; right: 3px;}
+#version_data {color: #F9F9FA; font-size: 13px;}
 
 /*== Config page buttons ==*/
 #configuration_buttons {color: #f9f9facc; display: flex; flex-flow: column;}
@@ -105,5 +110,7 @@ main {margin-top: 80px;}
 #credits_modal a {text-decoration: underline; color: #F9F9FA;}
 #credits_modal_close {cursor: pointer; color: white; position: absolute; top: 5px; right: 10px;}
 #credits_modal_close i {font-size: 18px;}
-#using_elements {margin: 10px 0 10px 0;}
+
+#credits__current_version {margin: 15px 0 15px 0;}
+#using_elements {margin-bottom: 15px;}
 #using_elements ul {margin-left: 20px;}

@@ -15,33 +15,35 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-from app import app, Tabs, socketio
+from app import app, Tabs, socketio, VERSION_NUM
 import flask
 
 yandex_se = 'https://yandex.ru/search/?text='
 google_se = 'https://www.google.ru/search?q='
 
+# Save tab event
 @socketio.on('save_tab')
 def savetab(tab_data):
     Tabs.tab_update(tab_data)
     socketio.emit('reload_page', 'tab_saved')
 
+# Delete tab event
 @socketio.on('delete_tab')
 def deletetab(tab_id):
     Tabs.tab_delete(tab_id['id'])
     socketio.emit('reload_page', 'tab_deleted')
 
 
-# Главная страница
+# Main page
 @app.route('/', methods=['get', 'post'])
 def page__index():
-    response = flask.make_response(flask.render_template('index.html', tabs_data=Tabs.get_all()))
+    response = flask.make_response(flask.render_template('index.html', tabs_data=Tabs.get_all(), hometabs_version=VERSION_NUM))
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "0"
     return response
 
-# Простой поиск (БЕЗ ПОДСКАЗОК)
+# Simple search (WHITHOUT SEARCH HINTS)
 @app.route('/search-simple', methods=['get', 'post'])
 def search_system():
     searchbar_data = flask.request.form.get('searchbar_input')
