@@ -26,9 +26,9 @@
 
   ____
   
-  * Systems: Windows 10, Linux (Ubuntu)  
+  * Systems: Windows 10, Linux
   * Browsers: Any (maybe except the Safari)
-  * Not working on mobile browsers and OS's.
+  * Not working on mobile browsers and OS's
   
 # Features
 * Organize your bookmarks by positioning it
@@ -38,7 +38,6 @@
 ![HomeTabs gif](https://user-images.githubusercontent.com/55492813/118640835-19e71a80-b7e2-11eb-9f4b-730701a526fe.gif)
 
 # Getting Started (wow so simple)
-\[Windows]
 1. Run HomeTabs.exe
 2. Open your browser and type in your address bar: http://127.0.1.1:8000 (you can check and change address in config.ini in HomeTabs main folder)
 3. Enjoy ❤️
