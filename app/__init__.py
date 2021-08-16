@@ -21,7 +21,7 @@ from flask import Flask
 from flask_socketio import SocketIO
 
 
-VERSION_NUM = '1.0.1'
+VERSION_NUM = '1.0.3'
 
 logfile_name = f'lastlog.log' # Log-file name for ReLogger
 
