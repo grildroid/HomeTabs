@@ -3,32 +3,37 @@
   
   HomeTabs don't collect and don't transfer any of your personal data!  
   
-  *In plans: improve HomeTabs and add a lot of new interesting functions.*  
+  In plans: *improve HomeTabs and add a lot of new interesting functions.*  
+  
+  * Systems: Windows 10, Linux
+  * Browsers: Any (maybe except the Safari)
+  * Not working on mobile browsers and OS's  
   
 <p align="center">
 <a href="https://github.com/grildroid/HomeTabs/releases"><img src="https://img.shields.io/github/v/release/grildroid/HomeTabs?style=flat-square" alt="Github release Badge"/></a>
 <a href="/LICENSE"><img src="https://img.shields.io/github/license/grildroid/HomeTabs?style=flat-square" alt="Github license Badge"/></a>
 <a href="https://sourceforge.net/projects/hometabs/files/latest/download"><img alt="Download HomeTabs" src="https://img.shields.io/sourceforge/dt/hometabs.svg" ></a>
 </p>
-  
+
 <p align="center">
   <a href="https://sourceforge.net/projects/hometabs/files/latest/download"><img alt="Download homeTabs" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a>
 </p>
   
   ![HomeTabs example](https://user-images.githubusercontent.com/55492813/118639548-b1e40480-b7e0-11eb-8815-7f474b26a52d.png)
   
-  **❤️ Come visit our Telegram channel with news about HomeTabs updates, some blog stuff and other @grildroid projects! ❤️**  
-  
+<p align="center">
+❤️ <b>Come visit our Telegram channel with news about gToWbot updates, some blog stuff and other @grildroid projects!</b> ❤️
+</p>
+
 <p align="center">
 <a href="https://t.me/grildroidcave"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>
 <a href="https://trello.com/b/mLLcO0iz/hometabs"><img src="https://img.shields.io/badge/-Trello-blue?&style=for-the-badge&logo=Trello" alt="Trello Badge"/></a> 
 </p>
 
-  ____
-  
-  * Systems: Windows 10, Linux
-  * Browsers: Any (maybe except the Safari)
-  * Not working on mobile browsers and OS's
+# License
+  HomeTabs is a free opensource project!
+  HomeTabs Copyright © 2021 grildroid  
+  [Licensed under GNU General Public License v3 (GPL-3)](/LICENSE)  
   
 # Features
 * Organize your bookmarks by positioning it
@@ -54,7 +59,4 @@
 * Writed on Python3 language. Using modules: Flask, Sqlite3, flask-socketio.
 * Uses Socket.IO (JS).
 * Uses Font Awesome Free icons.
-  
-# License
-  HomeTabs Copyright © 2021 grildroid  
-  [Licensed under GNU General Public License v3 (GPL-3)](/LICENSE)  
+
