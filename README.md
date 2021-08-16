@@ -6,8 +6,8 @@
   *In plans: improve HomeTabs and add a lot of new interesting functions.*  
   
 <p align="center">
-<a href="/releases"><img src="https://img.shields.io/github/v/release/grildroid/HomeTabs?style=flat-square" alt="Github release Badge"/></a>
-<a href="/license"><img src="https://img.shields.io/github/license/grildroid/HomeTabs?style=flat-square" alt="Github license Badge"/></a>
+<a href="https://github.com/grildroid/HomeTabs/releases"><img src="https://img.shields.io/github/v/release/grildroid/HomeTabs?style=flat-square" alt="Github release Badge"/></a>
+<a href="/LICENSE"><img src="https://img.shields.io/github/license/grildroid/HomeTabs?style=flat-square" alt="Github license Badge"/></a>
 <a href="https://sourceforge.net/projects/hometabs/files/latest/download"><img alt="Download HomeTabs" src="https://img.shields.io/sourceforge/dt/hometabs.svg" ></a>
 </p>
   
