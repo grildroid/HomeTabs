@@ -3,11 +3,16 @@
   
   HomeTabs don't collect and don't transfer any of your personal data!  
   
-  *In plans: improve HomeTabs in the future and add a lot of new interesting functions.*  
+  *In plans: improve HomeTabs and add a lot of new interesting functions.*  
   
 <p align="center">
 <a href="/releases"><img src="https://img.shields.io/github/v/release/grildroid/HomeTabs?style=flat-square" alt="Github release Badge"/></a>
 <a href="/license"><img src="https://img.shields.io/github/license/grildroid/HomeTabs?style=flat-square" alt="Github license Badge"/></a>
+<a href="https://sourceforge.net/projects/hometabs/files/latest/download"><img alt="Download HomeTabs" src="https://img.shields.io/sourceforge/dt/hometabs.svg" ></a>
+</p>
+  
+<p align="center">
+  <a href="https://sourceforge.net/projects/hometabs/files/latest/download"><img alt="Download homeTabs" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a>
 </p>
   
   ![HomeTabs example](https://user-images.githubusercontent.com/55492813/118639548-b1e40480-b7e0-11eb-8815-7f474b26a52d.png)
