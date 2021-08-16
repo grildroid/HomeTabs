@@ -26,9 +26,11 @@
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/6ZGDgFjDVm" title="Join the discord!"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a>
-  <!--<a href="https://t.me/grildroidcave"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>-->  
-  <a href="https://trello.com/b/mLLcO0iz/hometabs"><img src="https://img.shields.io/badge/-Trello-blue?&style=for-the-badge&logo=Trello" alt="Trello Badge"/></a>  
+  <a href="https://discord.gg/6ZGDgFjDVm" title="Join grildroid's Discord!">
+    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"/>
+    <img src="https://img.shields.io/discord/832287844084350979?color=red&label=Discord&style=for-the-badge"/>
+  </a>
+  <!--<a href="https://t.me/grildroidcave" title="Join grildroid's Telegram!"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>-->  
 </p>
 
 # License
