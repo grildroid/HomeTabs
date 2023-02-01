@@ -21,6 +21,7 @@
   
   ![HomeTabs example](https://user-images.githubusercontent.com/55492813/118639548-b1e40480-b7e0-11eb-8815-7f474b26a52d.png)
   
+<!--
 <p align="center">
 ❤️ <b>Come visit the Discord channel with news about gToWbot updates, some blog stuff and other grildroid's projects!</b> ❤️
 </p>
@@ -30,8 +31,9 @@
     <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"/>
     <img src="https://img.shields.io/discord/832287844084350979?color=red&label=Discord&style=for-the-badge"/>
   </a>
-  <!--<a href="https://t.me/grildroidcave" title="Join grildroid's Telegram!"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>-->  
+  <a href="https://t.me/grildroidcave" title="Join grildroid's Telegram!"><img src="https://img.shields.io/badge/-Telegram%20channel-blue?style=for-the-badge&logo=Telegram" alt="Telegram Badge"/></a>
 </p>
+-->
 
 # License
   HomeTabs is a free opensource project!
